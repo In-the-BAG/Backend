@@ -1,7 +1,12 @@
 'use strict';
 
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.bulkInsert('posts', [
+      {
+        
+      }
+    ])
     /**
      * Add seed commands here.
      *
