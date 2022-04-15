@@ -7,8 +7,8 @@ module.exports = {
         description: 'this is a test comment',
         userId: 1,
         postId: 1,
-        createdAt: new Date(),
-        updatedAt: new Date()
+        created_at: new Date(),
+        updated_at: new Date()
       }
     ],
     {}

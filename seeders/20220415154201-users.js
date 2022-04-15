@@ -1,18 +1,23 @@
 'use strict';
-const faker = require('faker')
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const users = [...Array(10)].map((_) => ({
-      firstName: faker.internet.firstName(),
-      lastName: faker.internet.lastName(),
-      username: faker.internet.userName(),
-      email: faker.internet.email(),
-      password: faker.internet.password(),
-      image: faker.internet.imageUrl(),
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }))
-    await queryInterface.bulkInsert('users', users)
+    return queryInterface.bulkInsert('users', [
+      {
+        firstName: 'John',
+        lastName: 'Smith',
+        username: 'JSmith',
+        email: 'jsmith@hotmail.com',
+        password: '12345',
+        image: 'https://media.npr.org/assets/img/2021/10/19/kanyewest_wide-96a94105571576fccf8dac36615998c2ddf87634.jpg?s=1400',
+       
+        created_at: new Date(),
+        updated_at: new Date()
+
+      }
+    ],
+    {}
+    )
   },
 
   down: async (queryInterface, Sequelize) => {
