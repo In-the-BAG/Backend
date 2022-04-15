@@ -5,8 +5,8 @@ module.exports = {
     return queryInterface.bulkInsert('comments', [
       {
         description: 'this is a test comment',
-        userId: 1,
-        postId: 1,
+        userid: 1,
+        postid: 1,
         created_at: new Date(),
         updated_at: new Date()
       }

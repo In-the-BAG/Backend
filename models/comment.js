@@ -7,14 +7,14 @@ module.exports = (sequelize, DataTypes) => {
    
     static associate(models) {
       Comment.belongsTo(models.User, {
-        as: 'user',
-        foreignKey: 'userId',
+        as: 'users',
+        foreignKey: 'user_id',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
       }),
       Comment.belongsTo(models.Post, {
         as: 'posts',
-        foreignKey: 'postId',
+        foreignKey: 'post_id',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
       })
@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     description: {
       type: DataTypes.STRING,
       allowNull: false },
-    userId: {
+    userid: {
       type: DataTypes.INTEGER,
       onDelete: 'CASCADE',
       onUpdate: 'CASCADE',
@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     } ,
-    postId:{
+    postid:{
       type: DataTypes.INTEGER,
       onDelete: 'CASCADE',
       onUpdate: 'CASCADE',

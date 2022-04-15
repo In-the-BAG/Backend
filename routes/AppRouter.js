@@ -4,7 +4,7 @@ const UserRouter = require('./UserRoute')
 // // const PostRouter = require('./PostRoute')
 // // const CommentRouter = require('./CommentRoute')
 
-Router.use('/users', UserRouter)
+Router.use('/user', UserRouter)
 // // Router.use('/post', PostRouter)
 // // Router.use('/comment', CommentRouter)
 

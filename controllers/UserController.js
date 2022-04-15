@@ -9,6 +9,8 @@ const GetUsers = async (req, res) => {
     }
 }
 
+
+
 module.exports = {
     GetUsers
 }
