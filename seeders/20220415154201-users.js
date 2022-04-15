@@ -1,5 +1,5 @@
 'use strict';
-
+const faker = require('faker')
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const users = [...Array(10)].map((_) => ({
@@ -16,6 +16,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('users')
+    await queryInterface.bulkDelete('users', null, {})
   }
 };
