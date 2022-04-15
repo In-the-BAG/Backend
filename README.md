@@ -55,5 +55,3 @@ We've broken down our team into three separate groups, frontend, backend, and mi
 ### [Lucid ERD Diagram](https://lucid.app/lucidchart/a5f575bf-e4c6-4691-9a52-0da71e0476f3/edit?beaconFlowId=C1B346EEF55AC884&invitationId=inv_fcd2cf41-861a-4d1a-8bb2-d379ad521466&page=0_0#)
 
 ### [TrelloBoard](https://trello.com/b/4Yb1PFmX/travel-project)
-
-l
