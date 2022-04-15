@@ -14,20 +14,26 @@ module.exports = (sequelize, DataTypes) => {
         as: 'user',
         foreignKey: 'userId',
         onDelete: 'CASCADE',
-        onUpdate: 'CASCADE'
+        onUpdate: 'CASCADE',
       }),
       Post.hasMany(models.Comment, {
         as: 'comment',
-        foreignKey: 'postId'
+        foreignKey: 'postId',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
       })
       
     }
   }
   Post.init({
-    image: DataTypes.STRING,
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false },
     description: DataTypes.STRING,
     userId: {
       type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      onUpdate: 'CASCADE',
       reference: {
         model: 'users',
         key: 'id'
