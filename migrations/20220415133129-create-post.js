@@ -24,8 +24,8 @@ module.exports = {
           key: 'id'
         }  
       },
-      updatedAt: {
-        field: 'updated_at',
+      createdAt: {
+        field: 'created_at',
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: new Date()
