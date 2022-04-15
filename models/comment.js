@@ -4,19 +4,19 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Comment extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+   
     static associate(models) {
-      Post.belongsTo(models.User, {
+      Comment.belongsTo(models.User, {
         as: 'user',
         foreignKey: 'userId',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
       }),
-      Post.belongsTo(models.Post, {
+      Comment.belongsTo(models.Post, {
         as: 'posts',
         foreignKey: 'postId',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
       })
     }
   }
@@ -41,10 +41,11 @@ module.exports = (sequelize, DataTypes) => {
         model: 'posts',
         key: 'id'
       }
-  }, 
-    sequelize,
-    modelName: 'Comment',
-    tableName: 'comments',
-  });
+  }
+}, {
+  sequelize,
+  modelName: 'Comment',
+  tableName: 'comments',
+});
   return Comment;
 };
