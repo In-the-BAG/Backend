@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Post.belongsTo(models.User, {
-        as: 'user',
-        foreignKey: 'userId',
+        as: 'users',
+        foreignKey: 'user_id',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
       }),
@@ -30,8 +30,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false },
     description: DataTypes.STRING,
-    userId: {
+    userid: {
       type: DataTypes.INTEGER,
+      field: 'user_id',
       onDelete: 'CASCADE',
       onUpdate: 'CASCADE',
       reference: {

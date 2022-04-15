@@ -7,24 +7,26 @@ module.exports = (sequelize, DataTypes) => {
    
     static associate(models) {
       User.hasMany(models.Post, { 
+        
+        foreignKey: 'user_id',
         as: 'posts',
-        foreignKey: 'userId',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       }),
       User.hasMany(models.Comment, { 
+        
+        foreignKey: 'user_id',
         as: 'comments',
-        foreignKey: 'userId',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       })
   }
 }
   User.init({
-    firstName: {
+    firstname: {
       type: DataTypes.STRING,
       allowNull: false },
-    lastName: {
+    lastname: {
       type: DataTypes.STRING,
       allowNull: false },
     username: {
