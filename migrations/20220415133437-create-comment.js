@@ -13,6 +13,9 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
+        feild: 'userId',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
         reference: {
           model: 'users',
           key: 'id'
@@ -20,18 +23,25 @@ module.exports = {
       },
       postId: {
         type: Sequelize.INTEGER,
+        feild: 'postId',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
         reference: {
           model: 'posts',
           key: 'id'
         }  
       },
       createdAt: {
+        field: 'created_at',
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date()
       },
       updatedAt: {
+        field: 'updated_at',
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date()
       }
     });
   },

@@ -8,21 +8,40 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       User.hasMany(models.Post, { 
         as: 'posts',
-        foreignKey: 'userId'
+        foreignKey: 'userId',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
       }),
       User.hasMany(models.Comment, { 
         as: 'comments',
-        foreignKey: 'userId'
+        foreignKey: 'userId',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
       })
   }
 }
   User.init({
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
-    username: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    image: DataTypes.STRING
+    firstName: {
+      type: DataTypes.STRING,
+      allowNull: false },
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isEmail: true
+      }
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    image: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'User',
