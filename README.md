@@ -32,29 +32,28 @@ We will have our website land on the home screen,and will only be accessible to 
 We've broken down our team into three separate groups, frontend, backend, and middleware. Each member will have their own duties, and have the most important duty of helping out their teammates when they're stuck. We are a high functioning team, and emphasize teamwork.
 
 ## Front-End
-Alex Barbosa
-### LinkedIn
-https://www.linkedin.com/in/alexbarbosa1/
-### GitHub
-https://github.com/barboa91
+### Alex Barbosa
+
+### [LinkedIn](https://www.linkedin.com/in/alexbarbosa1/)
+### [GitHub](https://github.com/barboa91)
 
 ## Middle-Ware
-Brynner Ventura
-### LinkedIn
-https://www.linkedin.com/in/brynner-ventura/
-### GitHub
-https://github.com/Brynner03
+### Brynner Ventura
+
+### [LinkedIn](https://www.linkedin.com/in/brynner-ventura/)
+### [GitHub](https://github.com/Brynner03)
 
 ## Back-End
-GJ Haaland
-### LinkedIn
-https://www.linkedin.com/in/gj-haaland/
-### GitHub
-https://github.com/GG-Haaland
+### GJ Haaland
+
+### [LinkedIn](https://www.linkedin.com/in/gj-haaland/)
+### [GitHub](https://github.com/GG-Haaland)
 
 
 ## Resources:
-### Lucid ERD Diagram
-https://lucid.app/lucidchart/a5f575bf-e4c6-4691-9a52-0da71e0476f3/edit?beaconFlowId=C1B346EEF55AC884&invitationId=inv_fcd2cf41-861a-4d1a-8bb2-d379ad521466&page=0_0#
-### TrelloBoard
-https://trello.com/b/4Yb1PFmX/travel-project
+
+### [Lucid ERD Diagram](https://lucid.app/lucidchart/a5f575bf-e4c6-4691-9a52-0da71e0476f3/edit?beaconFlowId=C1B346EEF55AC884&invitationId=inv_fcd2cf41-861a-4d1a-8bb2-d379ad521466&page=0_0#)
+
+### [TrelloBoard](https://trello.com/b/4Yb1PFmX/travel-project)
+
+l
