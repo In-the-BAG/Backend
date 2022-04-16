@@ -9,11 +9,13 @@ const Login = async (req, res) => {
     })
     if (
       user &&
-      (await middleware.comparePassword(user.passwordDigest, req.body.password))
+      (await middleware.comparePassword(user.password, req.body.password))
     ) {
       let payload = {
-        id: user.id,
-        email: user.email
+        firstname: user.firstname,
+        email: user.email,
+        lastname:user.lastname,
+        image:user.image
       }
       let token = middleware.createToken(payload)
       return res.send({ user: payload, token })
@@ -26,9 +28,9 @@ const Login = async (req, res) => {
 
 const Register = async (req, res) => {
   try {
-    const { email, password, name } = req.body
-    let passwordDigest = await middleware.hashPassword(password)
-    const user = await User.create({ email, passwordDigest, name })
+    const { email, passwordtemp, firstname, lastname, username } = req.body
+    let password = await middleware.hashPassword(passwordtemp)
+    const user = await User.create({ email, password, firstname, lastname, username })
     res.send(user)
   } catch (error) {
     throw error

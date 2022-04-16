@@ -11,9 +11,9 @@ module.exports = {
       description: {
         type: Sequelize.STRING
       },
-      userId: {
+      userid: {
         type: Sequelize.INTEGER,
-        feild: 'userId',
+       
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
         reference: {
@@ -21,9 +21,9 @@ module.exports = {
           key: 'id'
         }  
       },
-      postId: {
+      postid: {
         type: Sequelize.INTEGER,
-        feild: 'postId',
+       
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
         reference: {
