@@ -1,5 +1,6 @@
 const { Post } = require('../models')
 
+
 const GetAllPosts = async (req, res) => {
     try {
         const posts = await Post.findAll()
@@ -20,6 +21,7 @@ const GetPostDetails = async (req, res) => {
     } catch (err) {
         throw err
     }
+
 }
 
 const CreatePost = async (req, res) => {
