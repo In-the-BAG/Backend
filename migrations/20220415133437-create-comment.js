@@ -13,7 +13,7 @@ module.exports = {
       },
       userid: {
         type: Sequelize.INTEGER,
-        feild: 'user_id',
+       
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
         reference: {
@@ -23,7 +23,7 @@ module.exports = {
       },
       postid: {
         type: Sequelize.INTEGER,
-        feild: 'post_id',
+       
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
         reference: {
