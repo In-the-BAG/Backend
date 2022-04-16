@@ -12,13 +12,13 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Post.belongsTo(models.User, {
         as: 'users',
-        foreignKey: 'user_id',
+        foreignKey: 'userid',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
       }),
       Post.hasMany(models.Comment, {
         as: 'comment',
-        foreignKey: 'postId',
+        foreignKey: 'postid',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
       })
@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     userid: {
       type: DataTypes.INTEGER,
-      field: 'user_id',
+   
       onDelete: 'CASCADE',
       onUpdate: 'CASCADE',
       reference: {
