@@ -69,6 +69,7 @@ const DeletePost = async (req, res) => {
 };
 
 
+
 const GetPostByUser = async (req, res) => {
   try {
     let userId = parseInt(req.param.userid)
@@ -80,6 +81,7 @@ const GetPostByUser = async (req, res) => {
     throw error
   }
 }
+
 
 
 
