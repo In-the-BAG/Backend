@@ -27,15 +27,14 @@ const GetPostDetails = async (req, res) => {
 const CreatePost = async (req, res) => {
   try {
     // Find the Post by owner
-    let postId = parseInt(req.params.postid);
-    let userId = parseInt(req.params.userid);
+    //dont need this line the post should increment automatically let postId = parseInt(req.params.postid);
+    //userId will be sent in the body of req let userId = parseInt(req.params.userid);
     let postBody = {
-      postId,
-      userId,
+  // userId is sent in the body of the request      userId,
       ...req.body,
     };
     let post = await Post.create(postBody);
-    res.body(post);
+    res.send(post);
   } catch (err) {
     throw err;
   }
