@@ -44,9 +44,12 @@ const CreatePost = async (req, res) => {
 const UpdatePost = async (req, res) => {
   
     try {
-    let postId = parseInt(req.params.postid);
-    let updatedPost = await Post.update(req.body, {
-        where: { id: postId }, // where our id = our postId
+    // let postId = req.body.postid
+    // let userId = req.body.userid
+    // let post2update = await Post.findByPk(postId)
+    console.log('trying to update post id ' + req.body.id)
+    let updatedPost = await Post.update({...req.body}, {
+        where: { id:req.body.id }, // where our id = our postId
         returning: true,
       });
       //Sending out our updated post
