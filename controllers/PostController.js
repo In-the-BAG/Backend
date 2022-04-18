@@ -51,10 +51,7 @@ const UpdatePost = async (req, res) => {
       });
       //Sending out our updated post
       res.send(updatedPost);
-    } catch (error) {
-      throw error;
-    }
-  };
+    } 
 
 const DeletePost = async (req, res) => {
   try {
