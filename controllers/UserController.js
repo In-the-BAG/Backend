@@ -59,10 +59,11 @@ const DestroyUser = async (req, res) => {
 }
 
 
+
 module.exports = {
     GetUsers,
     GetUserByPk,
     CreateUser,
     UpdateUser,
-    DestroyUser
+    DestroyUser,
 }
