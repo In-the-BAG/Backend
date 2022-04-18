@@ -72,9 +72,11 @@ const DeletePost = async (req, res) => {
 
 const GetPostByUser = async (req, res) => {
   try {
-    let userId = parseInt(req.param.userid)
+    let userId = req.params.userid
+    console.log(userId)
     const usersPost = await Post.findAll(
-      req.params.userid
+      {where: {userid: userId}}
+
     )
     res.send(usersPost)
   } catch (error){
