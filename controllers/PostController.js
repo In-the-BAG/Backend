@@ -5,6 +5,7 @@ const GetAllPosts = async (req, res) => {
     try {
         const posts = await Post.findAll()
         res.send(posts)
+        console.log('POSTING IS WORKING')
     } catch (err) {
         throw err
     }
