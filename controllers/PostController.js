@@ -12,26 +12,25 @@ const GetAllPosts = async (req, res) => {
 }
 
 
-
 const GetPostDetails = async (req, res) => {
-    try {
-        const details = await Post.findByPk(
-            req.params.postid
-            );
-        res.send(details)
-    } catch (err) {
-        throw err
-    }
-
-}
-
-const CreatePost = async (req, res) => {
   try {
-    // Find the Post by owner
-    //dont need this line the post should increment automatically let postId = parseInt(req.params.postid);
-    //userId will be sent in the body of req let userId = parseInt(req.params.userid);
-    let postBody = {
-  // userId is sent in the body of the request      userId,
+    const details = await Post.findByPk(
+      req.params.postid
+      );
+      res.send(details)
+    } catch (err) {
+      throw err
+    }
+    
+  }
+  
+  const CreatePost = async (req, res) => {
+    try {
+      // Find the Post by owner
+      //dont need this line the post should increment automatically let postId = parseInt(req.params.postid);
+      //userId will be sent in the body of req let userId = parseInt(req.params.userid);
+      let postBody = {
+        // userId is sent in the body of the request      userId,
       ...req.body,
     };
     let post = await Post.create(postBody);
@@ -42,9 +41,7 @@ const CreatePost = async (req, res) => {
 };
 
 const UpdatePost = async (req, res) => {
-  
-    try {
-    // let postId = req.body.postid
+      // let postId = req.body.postid
     // let userId = req.body.userid
     // let post2update = await Post.findByPk(postId)
     console.log('trying to update post id ' + req.body.id)
@@ -59,20 +56,34 @@ const UpdatePost = async (req, res) => {
     }
   };
 
-  const DeletePost = async (req, res) => {
-    try {
-      
-      let postId = parseInt(req.params.postid);
-   
-      await Post.destroy({
-        where: { id: postId },
-      });
-      /// Have some message telling us it worked
-      res.send({ message: `deleted a post with an id of ${postId}` });
-    } catch (error) {
-      throw error;
-    }
-  };
+const DeletePost = async (req, res) => {
+  try {
+    
+    let postId = parseInt(req.params.postid);
+    
+    await Post.destroy({
+      where: { id: postId },
+    });
+    /// Have some message telling us it worked
+    res.send({ message: `deleted a post with an id of ${postId}` });
+  } catch (error) {
+    throw error;
+  }
+};
+
+
+const GetPostByUser = async (req, res) => {
+  try {
+    let userId = parseInt(req.param.userid)
+    const usersPost = await Post.findAll(
+      req.params.userid
+    )
+    res.send(usersPost)
+  } catch (error){
+    throw error
+  }
+}
+
 
 
 module.exports = {
@@ -80,5 +91,7 @@ module.exports = {
     GetPostDetails,
     CreatePost,
     UpdatePost,
-    DeletePost
+    DeletePost,
+    GetPostByUser
+
 }
