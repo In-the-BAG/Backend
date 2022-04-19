@@ -8,4 +8,5 @@ const controller = require('../controllers/CommentController')
 // Router.delete('/:commentid', controller.DeleteComment)
 Router.get('/postComments/:postId', controller.GetPostComments)
 
+
 module.exports = Router
