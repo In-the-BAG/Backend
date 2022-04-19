@@ -5,7 +5,7 @@ const GetAllPosts = async (req, res) => {
     try {
         const posts = await Post.findAll()
         res.send(posts)
-        console.log('POSTING IS WORKING')
+        console.log('Posting')
     } catch (err) {
         throw err
     }
@@ -44,7 +44,6 @@ const UpdatePost = async (req, res) => {
       // let postId = req.body.postid
     // let userId = req.body.userid
     // let post2update = await Post.findByPk(postId)
-    console.log('trying to update post id ' + req.body.id)
     let updatedPost = await Post.update({...req.body}, {
         where: { id:req.body.id }, // where our id = our postId
         returning: true,
@@ -55,7 +54,6 @@ const UpdatePost = async (req, res) => {
 
 const DeletePost = async (req, res) => {
   try {
-    console.log(req.params)
     let postId = parseInt(req.params.post_id);
     
     await Post.destroy({
@@ -73,7 +71,6 @@ const DeletePost = async (req, res) => {
 const GetPostByUser = async (req, res) => {
   try {
     let userId = req.params.userid
-    console.log(userId)
     const usersPost = await Post.findAll(
       {where: {userid: userId}}
 
