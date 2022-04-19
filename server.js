@@ -8,6 +8,8 @@ const AppRouter = require('./routes/AppRouter')
 const AuthRouter = require('./routes/AuthRouter')
 const PostRouter = require('./routes/PostRouter')
 const UserRouter = require('./routes/UserRoute')
+const CommentRouter = require('./routes/CommentRoute')
+
 
 const PORT = process.env.PORT || 3023
 
@@ -20,5 +22,7 @@ app.use('/api', AppRouter)
 app.use('/auth', AuthRouter)
 app.use('/post', PostRouter)
 app.use('/user', UserRouter)
+app.use('/comments', CommentRouter)
+
 
 app.listen(PORT, () => console.log(`Server Started On Port: ${PORT}`))

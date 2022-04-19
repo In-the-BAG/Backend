@@ -1,12 +1,13 @@
 const { Comment } = require('../models')
 
 const GetAllComments = async (req, res) => {
-    try {
-        const comments = await Comment.findAll()
-        res.send(comments)
-    } catch (err) {
-        throw err
-    }
+  try {
+      const comments = await Comment.findAll()
+      res.send(comments)
+      console.log('Comments are working')
+  } catch (err) {
+      throw err
+  }
 }
 
 
