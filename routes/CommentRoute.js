@@ -6,5 +6,6 @@ Router.get('/', controller.GetAllComments)
 // Router.post('/:userid/:postid', controller.CreateComment)
 // Router.put('/:commentid', controller.UpdateComment)
 // Router.delete('/:commentid', controller.DeleteComment)
+// Router.get('/profile/:userid', controller.GetCommentsToProfile)
 
 module.exports = Router

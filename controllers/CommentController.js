@@ -70,11 +70,27 @@ const UpdateComment = async (req, res) => {
     }
   };
 
+  const GetCommentsToProfile = async (req, res) => {
+    try {
+      let postId = req.params.postid
+      console.log(postId)
+      const usersComments = await Comment.findAll(
+        {where: {postid: postId}}
+  
+      )
+      res.send(usersComments)
+    } catch (error){
+      throw error
+    }
+  }
+  
+
 
 module.exports = {
     GetAllComments,
     GetCommentDetails,
     CreateComment,
     UpdateComment,
-    DeleteComment
+    DeleteComment,
+    GetCommentsToProfile
 }
