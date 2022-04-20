@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         onUpdate: 'CASCADE'
       }),
       User.belongsTo(models.Post, {
-        as: 'post',
+        as: 'userposts',
         foreignKey: 'postid',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
