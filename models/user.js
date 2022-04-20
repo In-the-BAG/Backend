@@ -7,18 +7,22 @@ module.exports = (sequelize, DataTypes) => {
    
     static associate(models) {
       User.hasMany(models.Post, { 
-        
         foreignKey: 'userid',
         as: 'posts',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       }),
       User.hasMany(models.Comment, { 
-        
         foreignKey: 'userid',
         as: 'comments',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
+      }),
+      User.belongsTo(models.Post, {
+        as: 'post',
+        foreignKey: 'postid',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
       })
   }
 }
@@ -44,6 +48,16 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     image: DataTypes.STRING,
+    bio: DataTypes.STRING,
+    postid: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      onUpdate: 'CASCADE',
+      reference: {
+        model: 'posts',
+        key: 'id'
+      }
+    } 
   }, {
     sequelize,
     modelName: 'User',

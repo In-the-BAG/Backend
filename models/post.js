@@ -21,6 +21,12 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'postid',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
+      }),
+      Post.hasMany(models.User, { 
+        foreignKey: 'posts',
+        as: 'userid',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
       })
       
     }
@@ -32,14 +38,14 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     userid: {
       type: DataTypes.INTEGER,
-   
       onDelete: 'CASCADE',
       onUpdate: 'CASCADE',
       reference: {
         model: 'users',
         key: 'id'
       }
-    } 
+    } ,
+    likes: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Post',
