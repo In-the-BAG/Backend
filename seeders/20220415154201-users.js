@@ -15,54 +15,54 @@ module.exports = {
       //   updated_at: new Date()
 
       // },
-      {
-        firstname: 'Will',
-        lastname: 'Smith',
-        username: 'The-Fresh-Smith',
-        email: 'slaptherock@hotmail.com',
-        password: '12345',
-        image: 'https://c.files.bbci.co.uk/B17E/production/_123983454_willsmithslap.jpg',
+      // {
+      //   firstname: 'Will',
+      //   lastname: 'Smith',
+      //   username: 'The-Fresh-Smith',
+      //   email: 'slaptherock@hotmail.com',
+      //   password: '12345',
+      //   image: 'https://c.files.bbci.co.uk/B17E/production/_123983454_willsmithslap.jpg',
        
-        created_at: new Date(),
-        updated_at: new Date()
+      //   created_at: new Date(),
+      //   updated_at: new Date()
 
-      },
-      {
-        firstname: 'Ed',
-        lastname: 'Eddy',
-        username: 'edSquared',
-        email: 'edXed@hotmail.com',
-        password: '12345',
-        image: 'https://mtv.mtvnimages.com/uri/mgid:ao:image:mtv.com:62793?quality=0.8&format=jpg&width=1440&height=810&.jpg',
+      // },
+      // {
+      //   firstname: 'Ed',
+      //   lastname: 'Eddy',
+      //   username: 'edSquared',
+      //   email: 'edXed@hotmail.com',
+      //   password: '12345',
+      //   image: 'https://mtv.mtvnimages.com/uri/mgid:ao:image:mtv.com:62793?quality=0.8&format=jpg&width=1440&height=810&.jpg',
        
-        created_at: new Date(),
-        updated_at: new Date()
+      //   created_at: new Date(),
+      //   updated_at: new Date()
 
-      },
-      {
-        firstname: 'Gj',
-        lastname: 'Haaland',
-        username: 'gjlandhaa',
-        email: 'gjlandhaa@gmail.com',
-        password: '12345',
-        image: 'https://pbs.twimg.com/media/FN_gj6uXwAIdmid.png',
+      // },
+      // {
+      //   firstname: 'Gj',
+      //   lastname: 'Haaland',
+      //   username: 'gjlandhaa',
+      //   email: 'gjlandhaa@gmail.com',
+      //   password: '12345',
+      //   image: 'https://pbs.twimg.com/media/FN_gj6uXwAIdmid.png',
        
-        created_at: new Date(),
-        updated_at: new Date()
+      //   created_at: new Date(),
+      //   updated_at: new Date()
 
-      },
-      {
-        firstname: 'Alex',
-        lastname: 'Barbosa',
-        username: 'gitmaster99',
-        email: 'abarbosa@gmail.com',
-        password: '12345',
-        image: 'https://media-exp1.licdn.com/dms/image/C4E03AQGFcteng6yjrg/profile-displayphoto-shrink_200_200/0/1645539401572?e=1653523200&v=beta&t=Q1WaQCDfJLtSuQbMEZy3mQlhLsYkOeYSvFQ8swYH4Os',
+      // },
+      // {
+      //   firstname: 'Alex',
+      //   lastname: 'Barbosa',
+      //   username: 'gitmaster99',
+      //   email: 'abarbosa@gmail.com',
+      //   password: '12345',
+      //   image: 'https://media-exp1.licdn.com/dms/image/C4E03AQGFcteng6yjrg/profile-displayphoto-shrink_200_200/0/1645539401572?e=1653523200&v=beta&t=Q1WaQCDfJLtSuQbMEZy3mQlhLsYkOeYSvFQ8swYH4Os',
        
-        created_at: new Date(),
-        updated_at: new Date()
+      //   created_at: new Date(),
+      //   updated_at: new Date()
 
-      },
+      // },
       {
         firstname: 'Brynner',
         lastname: 'Ventura',
