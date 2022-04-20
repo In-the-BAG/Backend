@@ -23,8 +23,8 @@ module.exports = (sequelize, DataTypes) => {
         onUpdate: 'CASCADE',
       }),
       Post.hasMany(models.User, { 
-        foreignKey: 'posts',
-        as: 'userid',
+        foreignKey: 'postid',
+        as: 'posts',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       })
