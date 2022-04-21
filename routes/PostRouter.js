@@ -11,6 +11,8 @@ router.get('/profile/:userid', controller.GetPostByUser)
 
 router.post('/likepost', likeController.LikePost)
 router.delete('/unlikepost', likeController.unLikePost)
+router.get('/likes/:userid', likeController.sendLikes)
+
 
 
 
