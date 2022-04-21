@@ -1,5 +1,21 @@
 const{ UserLikedPost } =require ( "../models")
 
+const sendLikes = async(req,res) =>{
+    try{
+
+        let userId = parseInt(req.params.userid);
+        let likes = {}
+        if(!isNaN(userId)){
+            likes = await UserLikedPost.findAll({
+            where:{userid: userId}
+        })}
+
+        res.send(likes)
+    } catch(err){
+        throw err
+    }
+}
+
 
 const LikePost =async(req,res)=>{
     try {
@@ -33,6 +49,7 @@ const unLikePost =async (req,res) =>{
 module.exports = {
 
     LikePost,
-    unLikePost
+    unLikePost,
+    sendLikes
 
 }
