@@ -20,7 +20,7 @@ module.exports = {
   production: {
     use_env_variable:'DATABASE_URL',
     database: "travel_gram_production",
-    host: "127.0.0.1",
+    // host: "127.0.0.1",
     dialect: "postgres",
     dialectOptions:{
       ssl:{
