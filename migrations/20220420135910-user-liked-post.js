@@ -15,20 +15,24 @@ module.exports = {
           key: 'id'
         }
       },
-      followerid: {
+      postid: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'users',
+          model: 'posts',
           key: 'id'
         }
       },
       createdAt: {
+        field: 'created_at',
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date()
       },
       updatedAt: {
+        field: 'updated_at',
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date()
       }
     })
   },
