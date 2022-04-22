@@ -58,7 +58,7 @@ const UpdateComment = async (req, res) => {
   const DeleteComment = async (req, res) => {
     try {
       
-      let commentId = parseInt(req.params.commentid);
+      let commentId = parseInt(req.params.id);
    
       await Comment.destroy({
         where: { id: commentId },
