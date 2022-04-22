@@ -34,7 +34,7 @@ const CreateComment = async (req, res) => {
       ...req.body,
     };
     let comment = await Comment.create(commentBody);
-    res.body(comment);
+    res.send(comment);
   } catch (err) {
     throw err;
   }
@@ -73,7 +73,7 @@ const UpdateComment = async (req, res) => {
   const GetPostComments = async (req, res) => {
     try {
       let postId = req.params.postId
-      console.log(postId)
+      console.log(postId.id)
       const usersComments = await Comment.findAll(
         {where: {postid: postId}}
   

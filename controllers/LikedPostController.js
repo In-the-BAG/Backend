@@ -22,7 +22,7 @@ const LikePost =async(req,res)=>{
         let likebody = {
         ...req.body,
     };
-    console.log(req)
+    // console.log(req)
     let post = await UserLikedPost.create(likebody);
     res.send(post);
     } catch (err) {
