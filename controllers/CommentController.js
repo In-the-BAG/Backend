@@ -27,7 +27,7 @@ const CreateComment = async (req, res) => {
   try {
     // Find the comment by owner
     let postId = parseInt(req.params.postid);
-    let userId = parseInt(req.params.user_id);
+    let userId = parseInt(req.params.userid);
     let commentBody = {
       postId,
       userId,
