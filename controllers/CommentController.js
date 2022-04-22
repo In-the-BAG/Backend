@@ -34,7 +34,7 @@ const CreateComment = async (req, res) => {
       ...req.body,
     };
     let comment = await Comment.create(commentBody);
-    res.body(comment);
+    res.send(comment);
   } catch (err) {
     throw err;
   }
